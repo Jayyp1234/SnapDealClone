@@ -783,3 +783,67 @@ footer .col-sm h6{
         width: 100%;
     }
 }
+.letDelivr{
+      font-size: 11px;
+    font-weight: normal;
+    line-height: 1.59;
+    text-align: center;
+    color: #5a5a59;
+    padding-left: 18px;
+    padding-right: 13px;
+}
+.marT10 {
+    margin-top: 10px;
+    display: flex;justify-content: center;
+}
+.input-nba input {
+    height: 35px;
+    padding: 3px 0px 6px 9px;
+    line-height: 16px;
+    font-size: 12px;
+    line-height: 1.47;
+    color: #999999;
+    width: 92%;
+    border-radius: 1.9px;
+    background-color: #fbfbfb;
+    border: solid 1px #e5e5e5;
+}
+.controls{
+    padding: 8px;
+    width: 100%;
+    display: flex;justify-content: space-between;
+}
+.btn-theme-secondary {
+    border-color: #333;
+    background-color: #333 !important;
+}
+.btn-theme-secondary {
+    color: white !important;
+}
+.btn-light {
+    background-color: #f4f4f4 !important;
+    color: #333 !important;
+}
+.btn {
+    border-radius: 3px;
+    display: inline-block;
+    height: 35px;
+    line-height: 36px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-out 0s;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    background-color: #e40046;
+}
