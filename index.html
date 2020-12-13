@@ -1105,6 +1105,9 @@
                                 box-shadow: 0 4px 10px 0 rgba(0,0,0,0.1);
                                 height: 270px;
                             }
+                            .login-phase{
+                                display: none;
+                            }
                             .carousel-controller .carousel-inner img{
                                 width: 100%;
                                 height: 100%;
@@ -1132,9 +1135,12 @@
                           </a>
                         </div>
                     </div>
+                    <script type="text/javascript">
+                        
+                    </script>
                     <div class="locator" >
                         <ul style="margin: 0 auto;position: relative;z-index: 50;width: 100%;min-height: 300px;padding: 0;list-style: none;">
-                            <li action="pincode" style="background-color: #fff;border: solid 0.9px #e5e5e5;border-radius: 3px;">
+                            <li class="pincode-location" action="pincode" style="background-color: #fff;border:solid 0.9px #e5e5e5;border-radius:3px;position:absolute;top:0%;">
                                 <div style="background-position: -5px -4px;width: 133px;height: 88px;margin: 30px auto 30px;background-image: url(assets/images/artboardNext.png);display: block;"></div>
                                 <div class="deliveryPin" style="font-size: 12px;font-weight: normal;color: #999999;padding-bottom: 4px;text-align: center;">Your Delivery Pincode</div>
                                 <div class="dashPincode" style="height: 2px;background-color: #eaeaea;width: 19px;margin: 11px auto;"></div>
@@ -1142,11 +1148,27 @@
                                 <div class="marT10 input-nba">
                                     <input class="" type="text" id="pincode-check-nba" maxlength="6" placeholder="Enter pincode" value="">
                                 </div>
-                                <div class="controls nextBestActionControls padT20 col-xs-24">
+                                <div class="controls">
                                     <button class="btn btn-theme-secondary" style="width: 60%;">
                                         <span class="">SUBMIT</span>
                                     </button>
-                                    <button class="btn btn-light">
+                                    <button class="btn next-login btn-light">
+                                        <span class="">NEXT</span>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="login-phase" action="login" style="background-color: #fff;">
+                                <div style="background-position: 239px -7px;;height: 129px;background-image: url(assets/images/artboardNext.png);display: block;margin-bottom: 20px;width: 100%;top: 0%;"></div>
+                                <div class="commonFreeCharge" style="font-size: 11px;font-weight: normal;line-height: 1.45;text-align: center;color: #666666;">
+                                    <p style="margin-bottom: 0px;">Login to your</p>
+                                    <p style="margin-bottom: 1rem;">Snapdeal account</p>
+                                </div>
+                                <div class="btn btn-theme-secondary" style="width: 75%;margin: auto;margin-bottom: 20px;margin-top: 10px;">
+                                    <a href="#">LOG IN</a>
+                                </div>
+                                <div class="controls" style="display: flex;justify-content: space-between;">
+                                    <div class="" style="font-size: 11px;color: #999999;display: inline-block;padding-right: 13px;line-height: 36px;cursor: pointer;">New user?<span class="registerNbaLink" style="color: #25a8ed;cursor: pointer;padding-left: 3px;">Register</span></div>
+                                    <button class="btn button--accept btn-light" style="color: #999;font-size: 12px;">
                                         <span class="">NEXT</span>
                                     </button>
                                 </div>
@@ -1839,6 +1861,14 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("nav").css({"position" : "static"});
+    });
+    $('.next-login').click(function(){
+        $('.pincode-location').fadeOut();
+        $('.login-phase').fadeIn();
+    });
+    $('.button--accept').click(function(){
+        $('.pincode-location').fadeIn();
+        $('.login-phase').fadeOut();
     });
     $(window).scroll(function() {
     if ($(this).scrollTop() < 20) {
