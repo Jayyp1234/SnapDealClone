@@ -294,7 +294,7 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
     background-color: #fff;
     border-radius: 3px;
     display: block;
-    width: 170px;
+    width: 190px;
 }
 .side-bar-container ul{
      position: relative;
@@ -403,7 +403,7 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
 
 .popper{
     position: absolute;
-    left: 170px;
+    left: 190px;
     min-width: 200px;
     top: 0%;
     display: none;
@@ -454,7 +454,7 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
     justify-content: space-between;
 }
 .main-section{
-    width: calc(100% - 180px);
+    width: calc(100% - 210px);
 }
 .carousel-indicators {
     position: absolute ;
