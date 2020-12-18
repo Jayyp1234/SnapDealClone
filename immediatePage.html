@@ -340,10 +340,15 @@
     background-color: transparent !important;color: #343a40 !important;
     border: 1px solid #343a40 !important; 
     margin: auto 10px;
+    font-family: "Open Sans Regular";
+    font-size: 85%;
 }.survey div > button:hover, .cat-wrapper + button:hover, .bb:hover{
     background-color: #343a40 !important;
     color: white !important;
-}
+}@media (min-width: 992px){
+.container {
+    max-width: 1200px;
+}}
     </style>
     <div class="container topper" style="padding-top: 2px;">
         <div class="bread-crum">
@@ -403,55 +408,209 @@
                 margin-top: 10px;
                 font-family: 'Open Sans Regular';
             }
+            .ui-widget-header {
+    height: 1px !important;
+    background: #020202;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  border: 1px solid #c3c3c3;
+  border-radius: 13px;
+  background: black;
+}
+.ui-widget-content {
+    height: 2px !important;
+    border: 0;
+    background: #e0e0da;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -10px;
+  cursor: pointer;
+}
+.ui-slider-handle {
+  outline: none;
+}
+.ui-slider-handle .amount {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  display: none;
+  width: 130px;
+  padding: 10px 0;
+  text-align: center;
+  margin-left: -55px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid #53b147;
+  background: #53b147;
+}
+.ui-slider-handle .amount:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border-bottom: 5px solid #53b147;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  background-color: #fff;
+}
+.min-range {
+  float: left;
+  padding-top: 12px;
+  font-size: 12px;
+  color: #888;
+}
+.max-range {
+  float: right;
+  padding-top: 12px;
+  font-size: 12px;
+  color: #888;
+}
+.slider-range-wrap {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}.range input{
+    border:1px solid rgb(0 0 0 / 28%);
+    border-radius: 4px;
+    width: 60px;
+    height: 35px;
+    margin-left: 0px;
+}#minimum{
+    margin-right: 4px;
+}#maximum{
+    margin-left: 4px;
+}.sub-cat-count{
+    font-size: 12px;
+    color: #b2b2b2;
+    }.selected i{
+    color: #b2b2b2;
+    }.cat-list i.icon-star{
+        color: #FFC315;
+    }.cat-list i.icon-star.active{
+        color: #e6e5e5;
+    }.product-tuple-image i{
+        position: absolute;
+        top: 4%;
+        right: 3%;
+        font-size: 110%;
+        cursor: pointer;
+    }.product-tuple-image i.icon-heart{
+        position: absolute;
+        top: 4%;
+        right: 3%;
+        display: none;
+        font-size: 110%;
+        color: red;
+    }
+    #searchWithinSearc{
+        width: 100%;border-bottom: 1.5px solid #b5b5b5;font-size: 14px;transition: 0.6s ease-in-out;
+    }#searchWithinSearc:active, #searchWithinSearc:focus{
+        border-bottom: 1px solid #e40046 !important;
+    }.icon-minus{
+        
+        color: #b2b2b2;
+        margin-top: 11px !important;
+    }.icon-plus{
+        display: none;
+    }.firstguy{
+        display: inline-block;
+        width: 92%;
+    }
+
         </style>
         <div class="flex-container">
             <div>
-                <div class="side-bar-container left-wrapper" style="min-height: 170px;width: 200px;">
+                <div class="side-bar-container left-wrapper" style="min-height: 170px;width: 240px;">
                     <div class="cat-nav-wrapper dp-widget dp-fired">
                         <ul class="top-cat-wrapper cat-wrapper">
                             <li class="top-cat-list fid cat-list" style="display: block">
                                 <i class="icon-plus" style="font-size: 11px;color: #666;"></i>
-                                <a class="top-cat-node dp-widget-link hashAdded" href="#" style="display: inline-block;width: auto;">
+                                <i class="icon-minus" style="font-size: 11px;"></i>
+                                <a class="top-cat-node " href="#" style="display: inline-block;width: auto;">
                                     <div class="top-cat-name selected"> Appliances</div>
                                 </a>
     
                                 <ul class="sub-cat-wrapper  cat-wrapper" id="js-4582-nav" style="height: auto">
-                                    <li class="sub-cat-list cat-list ">
+                                    <i class="icon-plus" style="font-size: 11px;color: #666;"></i>
+                                    <i class="icon-minus" style="font-size: 11px;"></i>
+                                    <li class="sub-cat-list cat-list firstguy">
                                         <a class="sub-cat-node hashAdded" href="#">
                                             <div class="sub-cat-name ">Large Appliances</div>
                                             <div class="sub-cat-count ">894</div>
                                         </a>
                                     </li>
-                                    <li class="sub-cat-list cat-list ">
+                                    <ul class="sub-cat-wrapper  cat-wrapper" id="js-4582-nav" style="height: auto">
+                                        <i class="icon-plus" style="font-size: 11px;color: #666;"></i>
+                                        <i class="icon-minus" style="font-size: 11px;"></i>
+                                        <li class="sub-cat-list cat-list firstguy">
                                         <a class="sub-cat-node hashAdded" href="#">
                                             <div class="sub-cat-name ">Large Appliances</div>
                                             <div class="sub-cat-count ">894</div>
                                         </a>
-                                    </li>
-                                    <li class="sub-cat-list cat-list ">
+                                        </li>
+                                        <ul class="sub-cat-wrapper  cat-wrapper" id="js-4582-nav" style="height: auto">
+                                            <li class="sub-cat-list cat-list ">
                                         <a class="sub-cat-node hashAdded" href="#">
                                             <div class="sub-cat-name ">Large Appliances</div>
                                             <div class="sub-cat-count ">894</div>
                                         </a>
-                                    </li>
-                                    <li class="sub-cat-list cat-list ">
+                                            </li>
+                                            <li class="sub-cat-list cat-list ">
                                         <a class="sub-cat-node hashAdded" href="#">
                                             <div class="sub-cat-name ">Large Appliances</div>
                                             <div class="sub-cat-count ">894</div>
                                         </a>
-                                    </li>
+                                            </li>
+                                            <li class="sub-cat-list cat-list ">
+                                                <a class="sub-cat-node hashAdded" href="#">
+                                                    <div class="sub-cat-name ">Large Appliances</div>
+                                                    <div class="sub-cat-count ">894</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </ul>
                                 </ul>
-                                <button class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 0px;height: 30px;"> View More</button>
                                 <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
                             </li>
                             <li>
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
-                                    <span style="font-size: 13px;">Brand</span> <i class="icon-plus" style="display: flex;align-items: center;"></i>
+                                    <span style="font-size: 13px;">Price</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;"></i>
                                 </div>
                                 <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
                                 <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav" style="height: auto">
                                     <li style="position: relative;width: 100%;margin-bottom: 20px;margin-top: 10px;">
-                                        <input type="text" name="" style="width: 100%;border-bottom: 1.5px solid #b5b5b5;font-size: 14px;" placeholder="Search by Brand"> 
+                                        <div class="slider-range-wrap">
+                                            <div id="slider-range"></div>
+                                            <span class="min-range">Rs 100</span>
+                                            <span class="max-range">Rs 1,000</span>
+                                        </div>
+                                    </li>
+                                    <li class="sub-cat-list range cat-list " style="align-items: center;">
+                                        <input type="" name="" id="minimum" > <span>- </span>  <input type="" name="" id="maximum"> <button class="btn bb btn-outline-dark" style="height: 35px;color: black;"> GO</button>
+                                    </li>
+                                    
+
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
+                                    <span style="font-size: 13px;">Brand</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
+                                </div>
+                                <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
+                                <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav" style="height: auto">
+                                    <li style="position: relative;width: 100%;margin-bottom: 20px;margin-top: 10px;">
+                                        <input type="text" name="" placeholder="Search by Brand" id="searchWithinSearc"> 
                                         <i class="icon-search" style="position: absolute;right: 1%;top: 50%;color: #b5b5b5;"> </i>
                                     </li>
                                     <li class="sub-cat-list cat-list ">
@@ -476,14 +635,14 @@
                             </li>
                             <li>
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
-                                    <span style="font-size: 13px;">Discount %</span> <i class="icon-plus" style="display: flex;align-items: center;"></i>
+                                    <span style="font-size: 13px;">Discount %</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
                                 </div>
                                 <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
                                 <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav" style="height: auto">
                                    
                                     <li class="sub-cat-list cat-list ">
                                             <div class="sub-cat-name "><input type="checkbox" name="">0 - 10</div>
-                                            <div class="sub-cat-count ">330</div>
+                                            <div class="sub-cat-count " style="">330</div>
                                     </li>
                                     <li class="sub-cat-list cat-list ">
                                             <div class="sub-cat-name "><input type="checkbox" name="">10 - 20</div>
@@ -503,12 +662,10 @@
                             </li>
                             <li>
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
-                                    <span style="font-size: 13px;">Style</span> <i class="icon-plus" style="display: flex;align-items: center;"></i>
+                                    <span style="font-size: 13px;">Style</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
                                 </div>
                                 <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
                                 <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav" style="height: auto">
-                                    
-
                                     <li class="sub-cat-list cat-list ">
                                             <div class="sub-cat-name "><input type="checkbox" name="">Straight4 </div>
                                             <div class="sub-cat-count ">3</div>
@@ -531,7 +688,7 @@
                             </li>
                             <li>
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
-                                    <span style="font-size: 13px;">Purpose</span> <i class="icon-plus" style="display: flex;align-items: center;"></i>
+                                    <span style="font-size: 13px;">Purpose</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
                                 </div>
                                 <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
                                 <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav" style="height: auto">
@@ -557,37 +714,10 @@
                                     <button class="btn bb btn-outline-dark" style="margin-top: 10px;margin-left: 0px;height: 30px;"> View More</button>
                                 </ul>
                             </li>
+                            
                             <li>
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
-                                    <span style="font-size: 13px;">Style</span> <i class="icon-plus" style="display: flex;align-items: center;"></i>
-                                </div>
-                                <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
-                                <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav" style="height: auto">
-                                    
-
-                                    <li class="sub-cat-list cat-list ">
-                                            <div class="sub-cat-name "><input type="checkbox" name="">Straight4 </div>
-                                            <div class="sub-cat-count ">3</div>
-                                    </li>
-                                    <li class="sub-cat-list cat-list ">
-                                            <div class="sub-cat-name "><input type="checkbox" name="">Anarkali</div>
-                                            <div class="sub-cat-count ">5</div>
-                                    </li>
-                                    <li class="sub-cat-list cat-list ">
-                                            <div class="sub-cat-name "><input type="checkbox" name="">Jacket Style</div>
-                                            <div class="sub-cat-count ">3</div>
-                                    </li>
-                                    <li class="sub-cat-list cat-list ">
-                                            <div class="sub-cat-name "><input type="checkbox" name="">A-line</div>
-                                            <div class="sub-cat-count ">0</div>
-                                    </li>
-
-                                    <button class="btn bb btn-outline-dark" style="margin-top: 10px;margin-left: 0px;height: 30px;"> View More</button>
-                                </ul>
-                            </li>
-                            <li>
-                                <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
-                                    <span style="font-size: 13px;">Purpose</span> <i class="icon-plus" style="display: flex;align-items: center;"></i>
+                                    <span style="font-size: 13px;">Purpose</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
                                 </div>
                                 <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
                                 <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav" style="height: auto">
@@ -607,6 +737,33 @@
                                     </li>
                                     <li class="sub-cat-list cat-list ">
                                             <div class="sub-cat-name "><input type="checkbox" name="">Toxic Gas Removal</div>
+                                            <div class="sub-cat-count ">0</div>
+                                    </li>
+                                    <button class="btn bb btn-outline-dark" style="margin-top: 10px;margin-left: 0px;height: 30px;"> View More</button>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
+                                    <span style="font-size: 13px;">Customer Ratings</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
+                                </div>
+                                <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
+                                <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav" style="height: auto">
+                                    
+
+                                    <li class="sub-cat-list cat-list ">
+                                            <div class="sub-cat-name "><input type="radio" name=""><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star active"></i></div>
+                                            <div class="sub-cat-count ">3</div>
+                                    </li>
+                                    <li class="sub-cat-list cat-list ">
+                                            <div class="sub-cat-name "><input type="radio" name=""><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star active"></i><i class="icon-star active"></i></div>
+                                            <div class="sub-cat-count ">5</div>
+                                    </li>
+                                    <li class="sub-cat-list cat-list ">
+                                            <div class="sub-cat-name "><input type="radio" name=""><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star active"></i><i class="icon-star active"></i><i class="icon-star active"></i></div>
+                                            <div class="sub-cat-count ">3</div>
+                                    </li>
+                                    <li class="sub-cat-list cat-list ">
+                                            <div class="sub-cat-name "><input type="radio" name=""><i class="icon-star"></i><i class="icon-star active"></i><i class="icon-star active"></i><i class="icon-star active"></i><i class="icon-star active"></i></div>
                                             <div class="sub-cat-count ">0</div>
                                     </li>
                                     <button class="btn bb btn-outline-dark" style="margin-top: 10px;margin-left: 0px;height: 30px;"> View More</button>
@@ -643,7 +800,7 @@
                         <h1 class="category-name"> Appliances<span class="category-count"> ( 5054 Items)</span>
                         </h1>
                         <div class="positionRelative lfloat searchBox initInvisible ">
-                            <input type="text" placeholder="Search within category" id="    searchWithinSearch" class="sd-input">
+                            <input type="text" placeholder="Search within category" id="searchWithinSearch" class="sd-input">
                             <div id="swsIco"><span><i class="sd-icon sd-icon-search-under-catagory" ></i></span></div>
                         </div>
                         <div class="sorting-sec animBounce">
@@ -684,6 +841,8 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i>
+                                    <i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -716,6 +875,8 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i>
+                                    <i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -748,6 +909,8 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i>
+                                    <i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -780,6 +943,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -814,6 +978,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -846,6 +1011,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -878,6 +1044,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -910,6 +1077,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -947,6 +1115,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -979,6 +1148,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -1011,6 +1181,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -1043,6 +1214,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -1077,6 +1249,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -1109,6 +1282,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -1141,6 +1315,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -1173,6 +1348,7 @@
                                     <div class="quick-view-bar btn-theme-secondary btn">
                                         Quick view
                                     </div>
+                                    <i class="icon-heart-o"></i><i class="icon-heart"></i>
                                 </div>
                                 <div class="product-tuple-description ">
                                     
@@ -1638,15 +1814,25 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("nav").css({"position" : "static"});
+        $('.quick-view-bar').append('<i class="icon-heart-o"></i><i class="icon-heart"></i>');
     });
     $('.next-login').click(function(){
         $('.pincode-location').fadeOut();
         $('.login-phase').fadeIn();
     });
+
     $('.button--accept').click(function(){
         $('.pincode-location').fadeIn();
         $('.login-phase').fadeOut();
     });
+    $('.icon-heart-o').click(function(){
+        $(this).hide();
+        $(this).next('.icon-heart').show();
+    });
+    $('.icon-heart').click(function(){
+        $(this).hide();
+        $(this).siblings('.icon-heart-o').show();
+    })
     $(window).scroll(function() {
     if ($(this).scrollTop() < 20) {
       $("nav").css({
@@ -1662,18 +1848,26 @@
         }
     
     });
-    $('.icon-plus').click(function(){
+    $('.selected .icon-plus').click(function(){
         $(this).parent().siblings('.sub-cat-wrapper').slideToggle('slow');
-        $(this).removeClass('icon-plus');
-        $(this).addClass('icon-minus');
+        $(this).hide();
+        $(this).next('.icon-minus').show();
     });
-    $('.icon-minus').click(function(){
+    $('.selected .icon-minus').click(function(){
         $(this).parent().siblings('.sub-cat-wrapper').slideToggle('slow');
-        $(this).removeClass('icon-minus');
-        $(this).addClass('icon-plus');
-        
+        $(this).hide();
+        $(this).siblings('.icon-plus').css({'display':'flex', 'align-items':'center'});
     });
-    
+    $('.fid .icon-plus').click(function(){
+        $(this).siblings('.cat-wrapper').slideToggle('slow');
+        $(this).hide();
+        $(this).next('.icon-minus').show();
+    });
+    $('.fid .icon-minus').click(function(){
+        $(this).siblings('.cat-wrapper').slideToggle('slow');
+        $(this).hide();
+        $(this).siblings('.icon-plus').show();
+    });
     $('.sort-selected').click(function(){
         $('.sort-value').slideToggle();
     });
@@ -1682,5 +1876,30 @@
         $('.sort-value li').removeClass('sort-active');
         $(this).addClass('sort-active');
     });
+</script>
+<script type="text/javascript">
+$(function() {
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 100,
+        max: 1000,
+        values: [ 100, 1000 ],
+        slide: function( event, ui ) {
+            $( "#min" ).html(ui.values[ 0 ]);
+            $( "#max" ).html(ui.values[ 1 ] );
+        }
+    });
+    $("#minimum").val('Rs'+$( "#slider-range" ).slider( "values", 0 ));
+    $("#maximum").val('Rs'+$( "#slider-range" ).slider( "values", 1 ));
+
+    $('.ui-slider-handle').eq(0).on("mousemove",function(e){
+        e.preventDefault();
+        $("#minimum").val('Rs '+$( "#slider-range" ).slider( "values", 0 ));
+    });
+    $('.ui-slider-handle').eq(1).on("mousemove",function(e){
+        e.preventDefault();
+        $("#maximum").val('Rs '+$( "#slider-range" ).slider( "values", 1 ));
+    });
+});
 </script>
 </html>
