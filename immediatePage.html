@@ -26,9 +26,12 @@
         <div class="navbar-container">
             <div class="div">
         <a href="index.html"><h4> Adinos</h4></a>
-        <form class="form" style="position: relative;" action="index.html">
+        <form class="form"  action="index.html">
       <input type="text" placeholder="Search products & brands" name="">
-      <i class="icon-search" style="position: absolute;top:50%;color:blue;right: 3%;cursor: pointer;"></i>
+      <span style="position: relative;background-color:black;margin: 0px;padding: 0px 30px;display: grid;align-items: center;cursor: pointer;">
+          <i class="icon-search" style="position: absolute;top:50%;left: 5%;cursor: pointer;"></i> Search
+      </span>
+      
         </form>
             </div>
             <div class="div phase1" style="padding-top: 4px;">
@@ -345,6 +348,14 @@
     margin: auto 10px;
     font-family: "Open Sans Regular";
     font-size: 85%;
+}
+.survey div > button:hover, .cat-wrapper + button, .bb:hover{
+    background-color: #343a40 !important;color: white !important;
+    
+}
+.survey div > button:focus, .cat-wrapper + button, .bb:focus{
+    box-shadow: none !important;
+    
 }@media (min-width: 992px){
 .container {
     max-width: 1300px;
@@ -602,7 +613,7 @@
                                         </div>
                                     </li>
                                     <li class="sub-cat-list range cat-list " style="align-items: center;">
-                                        <input type="" name="" id="minimum" > <span>- </span>  <input type="" name="" id="maximum"> <button class="btn bb btn-outline-dark" style="height: 35px;color: black;"> GO</button>
+                                        <input type="" name="" id="minimum" > <span>- </span>  <input type="" name="" id="maximum"> <button class="bb btn-outline-dark" style="height: 35px;color: black;"> GO</button>
                                     </li>
                                     
 
@@ -1536,13 +1547,14 @@
 </div>
 
 <div style="width: 100%; height: auto;" class="mobile">
-    <nav style="height: 50px !important;background-color: white !important;box-shadow: 0px 4px 2px rgba(0,0,0,0.2) ;">
+    <nav style="height: 50px !important;background-color: white !important;box-shadow: 0px 4px 2px rgba(0,0,0,0.2) ;z-index: 999 !important;">
         <div class="navbar-container" style="padding-left: 0px;align-items: center;">
             <a href="#" style="font-size: 19px;padding-left: 7px;"> <i class="icon-arrow_back"></i></a>
             <div class="div" style="width: 90%;">
                 <form class="form" style="position: relative;display: flex;width: 100%;" action="index.html">
-                    <input type="text" placeholder="Search products & brands" name="" style="width: 100%;border-radius: 30px;padding-left: 36px;height: 32px;">
-                    <i class="icon-search" style="position: absolute;top:50%;color:#98989a;left: 3%;cursor: pointer;"></i>
+                    <input type="text" placeholder="Search... " name="" style="width: 100%;border-radius: 30px;padding-left: 93px;height: 32px;">
+                    <span class="search-tag">Mobiles <i class="icon-pencil"></i> </span>
+                    <i class="icon-keyboard_voice" style="position: absolute;top:50%;color:#98989a;right: 3%;cursor: pointer;"></i>
                 </form>
             </div>
             <div class="div phase1" style="padding-top: 4px;">
@@ -1553,6 +1565,12 @@
     <style type="text/css">
         .search-results{
             font-size: 14px;padding-left: 10px;
+        }
+        .search-tag{
+            position: absolute;color:#98989a;left: 0%;cursor: pointer;height: 28px;
+            background-color:#6d6a6a;border-radius: 30px;color: white;font-size: 12px;
+            padding-left: 5px; padding-right: 5px;font-weight: 400;display: flex;
+            align-items: center;top: 2px;margin-left: 3px;
         }
         .searchresults{
             margin-left: 10px;
@@ -1989,7 +2007,7 @@
         </div>
     </div>
     <section class="floater" style="display: flex;overflow-x: scroll;overflow-y:hidden;height: 65px;justify-content: space-between;flex-wrap: nowrap;align-items: center;">
-       <a class="similarity filter">
+       <a class="similarity filter" data-toggle="modal" data-target="#myModal" >
           <i class="icon-compare_arrows"></i> <div></div> <span style="margin-right: 10px;"> Filter</span>
        </a>
        <a class="similarity">
@@ -2002,6 +2020,491 @@
            <span> Bluetooth Handsets</span>
        </a>
     </section>
+    <style type="text/css">
+        @media (min-width: 576px){
+            .modal-dialog {
+                max-width:100%;
+                margin: 1.75rem auto;
+            }
+        }
+        .list > li {
+            min-height: 32px;
+            display: flex;
+            background-color: #f9f9f9;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 5px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #e0dbdb;
+            cursor: pointer;
+        }.list > li.active{
+            color: #e40046 !important;
+            background-color: #fff;
+        }
+        
+        .list > li > span{
+            font-weight: 600;
+            font-size: 75%;
+            text-transform: uppercase;
+        }#myModal{
+            padding-right: 0px !important;
+        }
+        .category-bar li{
+            display: flex;justify-content: space-between;
+            padding: 4px 10px;color: #b1acac;font-size: 13.5px;
+            cursor: pointer;
+        }.filter-buttons span{
+            display: flex;align-items: center;
+            justify-content: center;font-size: 14px;
+        }.sub-category-bar{
+            padding: 0px 8px;
+            display: none;
+        }.sub-category-bar li{
+            padding: 2px 10px;font-size: 12.5px;
+        }.drop-down-trigger .icon-angle-down{
+            display: none;
+        }.categories{
+            display: none;
+        }.categories:first-child{
+            display: block;
+        }.categories{
+            padding-left: 5px;padding-right: 5px;
+        }
+        </style>
+    <div class="modal fade" id="myModal" style="z-index: 999999999;background-color: white;padding-right: 0px !important;">
+        <div class="modal-dialog modal-lg" style="width: 100%;margin: 0px;z-index: 9999999;">
+            <button type="button" class="close" data-dismiss="modal" style="position: absolute;z-index: 9999999;right: 1%;">&times;</button>
+        </div>
+        <span style="text-align: center;display: block;width: 90%;font-size: 14px;padding: 5px; ">1011215 (results)</span>
+        <div style="width: 100%;border-bottom: 1px solid #e0dbdb;"></div>
+        <div style="width: 100%;height: calc(100vh - 77px);overflow: hidden;display: flex;">
+            <div class="list" style="width: 140px;border-right:1px solid grey; overflow-y: auto;height: 100%;">
+              <li class="active">
+                  <span>Category</span><i class="icon-caret-right"></i>
+              </li>
+              <li>
+                  <span>brand</span>
+              </li>
+              <li>
+                  <span>price</span>
+              </li>
+              <li>
+                  <span>ram</span>
+              </li>
+              <li>
+                  <span>Connectivity</span>
+              </li>
+              <li>
+                  <span>form</span>
+              </li>
+              <li>
+                  <span>internal memory</span>
+              </li>
+              <li>
+                  <span>colour</span>
+              </li>
+              <li>
+                  <span>screen size</span>
+              </li>
+              <li>
+                  <span>discount %</span>
+              </li>
+              <li>
+                  <span>operating system</span>
+              </li>
+              <li>
+                  <span>battery capacity</span>
+              </li>
+              <li>
+                  <span>Otg Compatible</span>
+              </li>
+              <li>
+                  <span>primary camera</span>
+              </li>
+              <li>
+                  <span>processor cores</span>
+              </li>
+              <li>
+                  <span>sims</span>
+              </li>
+              <li>
+                  <span> resolution</span>
+              </li>
+            </div>
+            <div style="width: calc(100% - 140px);overflow-y: auto;height: 100%;" class="category-container">
+                <ul class="category-bar categories">
+                    <li class="drop-down-trigger">
+                        <span>Mobiles & Tablets</span> <span>(171298) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i></span>
+                    </li>
+                    <ul class="sub-category-bar">
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                    </ul>
+                    <li class="drop-down-trigger">
+                        <span>Toys & Games</span> <span>(57) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i></span>
+                    </li>
+                    <ul class="sub-category-bar">
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                    </ul>
+                    <li class="drop-down-trigger">
+                        <span>TV's, Audio & Video </span> <span>(2954) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i></span>
+                    </li>
+                    <ul class="sub-category-bar">
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                    </ul>
+                    <li class="drop-down-trigger">
+                        <span>Tools & Hardware</span> <span>(80) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i></span>
+                    </li>
+                    <ul class="sub-category-bar">
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li class="drop-down-trigger"> <span> Mobiles & Tablets</span> <span>(171298) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i> </span> </li>
+                        <ul class="sub-category-bar">
+                            <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                            <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                            <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                            <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        </ul>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                    </ul>
+                    <li class="drop-down-trigger">
+                        <span>Automotive</span> <span>(80) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i></span>
+                    </li>
+                    <ul class="sub-category-bar">
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                    </ul>
+                    <li class="drop-down-trigger">
+                        <span>Computers & Peripherals</span> <span>(80) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i></span>
+                    </li>
+                    <ul class="sub-category-bar">
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                    </ul>
+                    <li class="drop-down-trigger">
+                        <span>Home Improvement</span> <span>(80) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i></span>
+                    </li>
+                    <ul class="sub-category-bar">
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                    </ul>
+                    <li class="drop-down-trigger">
+                        <span>Appliances</span> <span>(80) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i></span>
+                    </li>
+                    <ul class="sub-category-bar">
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                    </ul>
+                    <li class="drop-down-trigger">
+                        <span>Gaming</span> <span>(80) <i class="icon-angle-right"></i> <i class="icon-angle-down"></i></span>
+                    </li>
+                    <ul class="sub-category-bar">
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                        <li> <span> Mobiles & Tablets</span> <span>(171298) <input type="radio" name=""> </span> </li>
+                    </ul>
+                </ul>
+                <ul class="brand categories" style="">
+                     <li style="position: relative;width: 100%;margin-bottom: 20px;margin-top: 10px;">
+                         <input type="text" name="" placeholder="Search by Brand" style="border:1.5px solid #b5b5b5;padding-left: 20px;font-size: 13px;border-radius: 3px;width: 100%;padding-top: 3px;padding-bottom: 3px;"> 
+                         <i class="icon-search" style="position: absolute;left: 1%;top: 50%;color: #b5b5b5;"> </i>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">MAHAGEETA</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Redmi</div>
+                        <div class="sub-cat-count ">(90) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Micromax</div>
+                        <div class="sub-cat-count ">(0) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Vivo</div>
+                        <div class="sub-cat-count ">(350) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Samsung</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Realme</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">MI</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Techno</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Lenovo</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                </ul>
+                <ul class="brand categories sub-cat-wrapper brand cat-wrapper" style="height: auto;position: relative;">
+                    <li style="position: relative;width: 100%;margin-bottom: 20px;margin-top: 30px;">
+                        <div class="slider-range-wrap ">
+                            <div id="slider-range1"></div>
+                            <span class="min-range">Rs 100</span>
+                            <span class="max-range">Rs 1,000</span>
+                        </div>
+                    </li>
+                    <li class="sub-cat-list range cat-list " style="align-items: center;">
+                        <input type="" name="" id="minimum1" > <span>- </span>  <input type="" name="" id="maximum1">
+                    </li>
+                                    
+                </ul>
+                <ul class="brand categories">
+                    <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Below 1GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">4 GB </div>
+                        <div class="sub-cat-count ">(90) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">3 GB</div>
+                        <div class="sub-cat-count ">(0) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">6 GB</div>
+                        <div class="sub-cat-count ">(350) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">2 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">1 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name "> Above 6 GB </div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     
+                </ul>
+                <ul class="brand categories">
+                    <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Below 1GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">4 GB </div>
+                        <div class="sub-cat-count ">(90) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">3 GB</div>
+                        <div class="sub-cat-count ">(0) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">6 GB</div>
+                        <div class="sub-cat-count ">(350) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">2 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">1 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name "> Above 6 GB </div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     
+                </ul>
+                <ul class="brand categories">
+                    <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Below 1GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">4 GB </div>
+                        <div class="sub-cat-count ">(90) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">3 GB</div>
+                        <div class="sub-cat-count ">(0) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">6 GB</div>
+                        <div class="sub-cat-count ">(350) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">2 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">1 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name "> Above 6 GB </div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     
+                </ul>
+                <ul class="brand categories">
+                    <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Below 1GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">4 GB </div>
+                        <div class="sub-cat-count ">(90) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">3 GB</div>
+                        <div class="sub-cat-count ">(0) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">6 GB</div>
+                        <div class="sub-cat-count ">(350) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">2 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">1 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name "> Above 6 GB </div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     
+                </ul>
+                <ul class="brand categories">
+                    <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Below 1GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">4 GB </div>
+                        <div class="sub-cat-count ">(90) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">3 GB</div>
+                        <div class="sub-cat-count ">(0) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">6 GB</div>
+                        <div class="sub-cat-count ">(350) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">2 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">1 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name "> Above 6 GB </div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     
+                </ul>
+                <ul class="brand categories">
+                    <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Below 1GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">4 GB </div>
+                        <div class="sub-cat-count ">(90) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">3 GB</div>
+                        <div class="sub-cat-count ">(0) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">6 GB</div>
+                        <div class="sub-cat-count ">(350) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">2 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">1 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name "> Above 6 GB </div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     
+                </ul>
+                <ul class="brand categories">
+                    <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">Below 1GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">4 GB </div>
+                        <div class="sub-cat-count ">(90) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">3 GB</div>
+                        <div class="sub-cat-count ">(0) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">6 GB</div>
+                        <div class="sub-cat-count ">(350) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">2 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name ">1 GB</div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     <li class="sub-cat-list cat-list ">
+                        <div class="sub-cat-name "> Above 6 GB </div>
+                        <div class="sub-cat-count ">(330) <input type="checkbox" name=""></div>
+                     </li>
+                     
+                </ul>
+            </div>
+
+        </div>
+        <div class="filter-buttons" style="width: 100%;display: flex;height: 45px;">
+            <span style="width: 30%;color:#e40046; ">Clear All</span>
+            <span class="apply-filter" style="width: 70%;background-color:#e40046;color: white;">Apply Filters</span>
+        </div>
+    </div>
+  
+</div>
 <style type="text/css">
     .login-but:hover > .class-drop{
         display: block !important;
@@ -2022,7 +2525,9 @@
         $('.pincode-location').fadeOut();
         $('.login-phase').fadeIn();
     });
-
+    $('.modal-dialog .close').click(function(){
+        $('#myModal').hide();
+    });
     $('.button--accept').click(function(){
         $('.pincode-location').fadeIn();
         $('.login-phase').fadeOut();
@@ -2034,13 +2539,24 @@
     $('.icon-heart').click(function(){
         $(this).hide();
         $(this).siblings('.icon-heart-o').show();
-    })
+    });
+    $('.drop-down-trigger').click(function(){
+        $(this).children().children('.icon-angle-right').toggle();
+        $(this).children().children('.icon-angle-down').toggle();
+        $(this).next('.sub-category-bar').slideToggle();
+    });
+    $('.list li').click(function(){
+        $('.list li').not($(this)).removeClass('active');
+        $('.list li i').not($(this)).remove();
+        $(this).addClass('active').append('<i class="icon-caret-right"></i>');
+    });
     $(window).scroll(function() {
     if ($(this).scrollTop() < 20) {
       $("nav").css({
         "position" : "static"
       });
     }
+
     else if ($(this).scrollTop() > 20) {
             $("nav").css({
               "position": "fixed",
@@ -2078,6 +2594,42 @@
         $('.sort-value li').removeClass('sort-active');
         $(this).addClass('sort-active');
     });
+    $('.list > li').eq(0).click(function(){
+        $('.categories').hide();
+        $('.categories').eq(0).show();
+    });
+    $('.list > li').eq(1).click(function(){
+        $('.categories').hide();
+        $('.categories').eq(1).show();
+    });
+    $('.list > li').eq(2).click(function(){
+        $('.categories').hide();
+        $('.categories').eq(2).show();
+    });
+    $('.list > li').eq(3).click(function(){
+        $('.categories').hide();
+        $('.categories').eq(3).show();
+    });
+    $('.list > li').eq(4).click(function(){
+        $('.categories').hide();
+        $('.categories').eq(4).show();
+    });
+    $('.list > li').eq(5).click(function(){
+        $('.categories').hide();
+        $('.categories').eq(5).show();
+    });
+    $('.list > li').eq(6).click(function(){
+        $('.categories').hide();
+        $('.categories').eq(7).show();
+    });
+    $('.list > li').eq(8).click(function(){
+        $('.categories').hide();
+        $('.categories').eq(8).show();
+    });
+    $('.list > li').eq(9).click(function(){
+        $('.categories').hide();
+        $('.categories').eq(9).show();
+    });
 </script>
 <script type="text/javascript">
 $(function() {
@@ -2101,6 +2653,27 @@ $(function() {
     $('.ui-slider-handle').eq(1).on("mousemove",function(e){
         e.preventDefault();
         $("#maximum").val('Rs '+$( "#slider-range" ).slider( "values", 1 ));
+    });
+    $( "#slider-range1" ).slider({
+        range: true,
+        min: 100,
+        max: 1000,
+        values: [ 100, 1000 ],
+        slide: function( event, ui ) {
+            $( "#min1" ).html(ui.values[ 0 ]);
+            $( "#max1" ).html(ui.values[ 1 ] );
+        }
+    });
+    $("#minimum1").val('Rs'+$( "#slider-range1" ).slider( "values", 0 ));
+    $("#maximum1").val('Rs'+$( "#slider-range1" ).slider( "values", 1 ));
+
+    $('.categories .ui-slider-handle').eq(0).on("mousemove",function(e){
+        e.preventDefault();
+        $("#minimum1").val('Rs '+$( "#slider-range1" ).slider( "values", 0 ));
+    });
+    $('.categories .ui-slider-handle').eq(1).on("mousemove",function(e){
+        e.preventDefault();
+        $("#maximum1").val('Rs '+$( "#slider-range1" ).slider( "values", 1 ));
     });
 });
 </script>
