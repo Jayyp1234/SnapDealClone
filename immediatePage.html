@@ -15,6 +15,12 @@
 </head>
 <style type="text/css">
     .hover-side_bar{position: relative;height: 47px;padding-top: 13px;}.hover-side_bar .flex-container{position: absolute;margin-left: -150px;margin-top: 10px;z-index: 999;display: none;} .hover-side_bar:hover > .flex-container{display: block;}.div .hover-side_bar .flex-container  ul li {width: 100% !important;padding: 0px !important;display: block !important;cursor: pointer;}.hover-side_bar .leftHead {padding-top: 12px;margin-bottom: 5px;}.hover-side_bar .leftHead:hover {background-color: transparent !important;}.hover-side_bar .side-bar-container ul li.navlink:hover, .hover-side_bar #topSearches li:hover {background-color: #fafafa !important;}.hover-side_bar #topSearches i {margin-top: 0px;}
+    .left-wrapper{
+        padding:0px;
+    }.left-wrapper > li{
+        padding-left: 17px;
+        padding-right: 17px;
+    }
     @media all and (max-width: 1000px){
         body{
             overflow-x: scroll;
@@ -1086,13 +1092,84 @@
                 <a href="#" >Slipper Women</a>
             </span>
         </div>
+        <style type="text/css">
+            .brand-hover{
+                position: absolute;
+                left: 235px;
+                display: none;
+                z-index: 9999999;
+                top: 340px;
+                height: 500px;
+                width: 600px;
+                background-color: white;
+                padding: 15px;
+            }.brand-panel{
+                display: flex;
+                justify-content: space-between;
+            }
+            .brand-panel div span {
+                margin-right: 6px;
+            }
+            .brand-panel button{
+                background-color: #e40046;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 2px 10px;
+            }.hh a{
+                font-size: 11px;
+                color: #333;
+    margin: 0;
+    background: transparent;
+            }.overflow ul {
+                height: 90%;
+                width: 200px;
+                white-space: nowrap;
+    padding-left: 50px;
+    padding-right: 50px;
+            }.overflow{
+                display: flex;
+            }.overflow ul li{
+                margin-bottom: 4px;
+            }.bobdaddy{
+                display: flex;
+    border-left: 4px solid red;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color:#f7f7f7;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid #e5e5e5;
+    border-right: 0;
+    padding-left: 7px;
+    padding: 15px;
+    z-index: 100;
+            }.js-adv-overlay {
+    z-index: 96;
+    position: absolute;
+    background: rgba(254,254,254,0.7);
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-        <div class="flex-container">
-            <div>
+}.label{
+    font-size: 12px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    pointer-events: auto;
+}sup{
+    color: #999;
+    margin-left: 4px;
+    font-size: 10px;
+}
+        </style>
+        <div class="flex-container" style="position: relative;">
                 <div class="side-bar-container left-wrapper" style="min-height: 170px;width: 240px;">
                     <div class="cat-nav-wrapper dp-widget dp-fired">
                         <ul class="top-cat-wrapper cat-wrapper">
-                            <li class="top-cat-list fid cat-list" style="display: block">
+                            <li class="top-cat-list fid cat-list" style="display: block;padding-left: 17px;padding-right: 17px;">
                                 <i class="icon-plus" style="font-size: 11px;color: #666;"></i>
                                 <i class="icon-minus" style="font-size: 11px;"></i>
                                 <a class="top-cat-node " href="#" style="display: inline-block;width: auto;">
@@ -1141,7 +1218,7 @@
                                 </ul>
                                 <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
                             </li>
-                            <li>
+                            <li style="padding-left: 17px;padding-right: 17px;">
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
                                     <span style="font-size: 13px;">Price</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;"></i>
                                 </div>
@@ -1162,12 +1239,13 @@
                                     
                                 </ul>
                             </li>
-                            <li>
-                                <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
+                            <li class="bigdaddy">
+                                <div class="top-cat-name selected" style="display: flex;justify-content:space-between;padding-left: 17px;padding-right: 17px;">
                                     <span style="font-size: 13px;">Brand</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
+                                    
                                 </div>
                                 <hr style="border-top: 1px solid rgb(0 0 0 / 18%) !important;">
-                                <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav" style="height: auto">
+                                <ul class="sub-cat-wrapper brand cat-wrapper" id="js-4582-nav"style="padding-left: 17px;height: auto;padding-right: 17px;">
                                     <li style="position: relative;width: 100%;margin-bottom: 20px;margin-top: 10px;">
                                         <input type="text" name="" placeholder="Search by Brand" id="searchWithinSearc"> 
                                         <i class="icon-search" style="position: absolute;right: 1%;top: 50%;color: #b5b5b5;"> </i>
@@ -1191,8 +1269,9 @@
 
                                     <button class="btn bb btn-outline-dark" style="margin-top: 10px;margin-left: 0px;height: 30px;"> View More</button>
                                 </ul>
+                                
                             </li>
-                            <li>
+                            <li style="padding-left: 17px;padding-right: 17px;">
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
                                     <span style="font-size: 13px;">Discount %</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
                                 </div>
@@ -1219,7 +1298,7 @@
                                     <button class="btn bb btn-outline-dark" style="margin-top: 10px;margin-left: 0px;height: 30px;"> View More</button>
                                 </ul>
                             </li>
-                            <li>
+                            <li style="padding-left: 17px;padding-right: 17px;">
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
                                     <span style="font-size: 13px;">Style</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
                                 </div>
@@ -1245,7 +1324,7 @@
                                     <button class="btn bb btn-outline-dark" style="margin-top: 10px;margin-left: 0px;height: 30px;"> View More</button>
                                 </ul>
                             </li>
-                            <li>
+                            <li style="padding-left: 17px;padding-right: 17px;">
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
                                     <span style="font-size: 13px;">Purpose</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
                                 </div>
@@ -1274,7 +1353,7 @@
                                 </ul>
                             </li>
                             
-                            <li>
+                            <li style="padding-left: 17px;padding-right: 17px;">
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
                                     <span style="font-size: 13px;">Purpose</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
                                 </div>
@@ -1301,7 +1380,7 @@
                                     <button class="btn bb btn-outline-dark" style="margin-top: 10px;margin-left: 0px;height: 30px;"> View More</button>
                                 </ul>
                             </li>
-                            <li>
+                            <li style="padding-left: 17px;padding-right: 17px;">
                                 <div class="top-cat-name selected" style="display: flex;justify-content: space-between;">
                                     <span style="font-size: 13px;">Customer Ratings</span> <i class="icon-plus"></i><i class="icon-minus" style="font-size: 11px;color: #666;"></i>
                                 </div>
@@ -1330,8 +1409,149 @@
                             </li>
                         </ul>
                     </div>
+                
+            </div> 
+            <div class="js-adv-overlay"></div>
+            <div class="brand-hover" style="position: absolute;left: 233px;top: 323px;height:450px; width: 750px;background-color:#f7f7f7;">
+                <div class="brand-panel">
+                    <div style="position: relative;">
+                        <input type="text" name="" placeholder="Search by Brand" id="searchWithinSearc" style="background-color: transparent;width: 300px;padding-left: 24px;border-bottom: 1px solid transparent;"> 
+                        <i class="icon-search" style="position: absolute;left: 1%;top: 50%;color: #b5b5b5;"> </i>
+                    </div>
+                    <div style="font-size: 13px;color: #999999;">
+                        <span>(0) Applied Filters </span> <span> <span style="color: red;">[Clear]</span> <span>|</span> 6 Results</span>
+                        
+                    </div>
+                    <button>APPLY</button>
+                    <i class="icon-close" style="    display: flex;
+    align-items: center;
+    font-size: 20px;"></i>
                 </div>
-            </div>         
+                <hr style="border-top: 1px solid rgb(115 109 109 / 90%) !important;margin-top: 0.5em">
+                <div style="display: flex;justify-content: space-around;" class="hh">
+                   <a href='#'> <span>Product</span></a>
+                   <a href='#'> <span>#</span></a>
+                   <a href='#'> <span>A</span></a>
+                   <a href='#'> <span>B</span></a>
+                   <a href='#'> <span>C</span></a>
+                   <a href='#'> <span>D</span></a>
+                   <a href='#'> <span>E</span></a>
+                   <a href='#'> <span>F</span></a>
+                   <a href='#'> <span>G</span></a>
+                   <a href='#'> <span>H</span></a>
+                   <a href='#'> <span>I</span></a>
+                   <a href='#'> <span>J</span></a>
+                   <a href='#'> <span>K</span></a>
+                   <a href='#'> <span>L</span></a>
+                   <a href='#'> <span>M</span></a>
+                   <a href='#'> <span>N</span></a>
+                   <a href='#'> <span>O</span></a>
+                   <a href='#'> <span>P</span></a>
+                   <a href='#'> <span>Q</span></a>
+                   <a href='#'> <span>R</span></a>
+                   <a href='#'> <span>S</span></a>
+                   <a href='#'> <span>T</span></a>
+                   <a href='#'> <span>U</span></a>
+                   <a href='#'> <span>V</span></a>
+                   <a href='#'> <span>W</span></a>
+                   <a href='#'> <span>X</span></a>
+                   <a href='#'> <span>Y</span></a>
+                   <a href='#'> <span>Z</span></a>
+                </div>
+                <div style="width: 100%;height: 89%;overflow:hidden;overflow-x: auto;" class="overflow" >
+                    
+                    <ul class="#">
+                        <label style="color: #e40046;margin-bottom: 0px;">#</label>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">12th of October </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">12th of October </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">12th of October </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">12th of October </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">12th of October </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">12th of October </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">12th of October </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">12th of October </a> <sup>27</sup></li>
+                        <label style="color: #e40046;margin-bottom: 0px;">A</label>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                    </ul>
+                    <ul class="#">
+                        <label> </label>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                    </ul>
+                    <ul class="#">
+                        <label style="color: #e40046;margin-bottom: 0px;">B</label>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                    </ul>
+                    <ul class="#">
+                        <label> </label>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                    </ul>
+                    <ul class="#">
+                        <label> </label>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                    </ul>
+                    <ul class="#">
+                        <label> </label>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                        <li><input type="checkbox" name=""> <a href="#" class="label">Apple Pie </a> <sup>27</sup></li>
+                    </ul>
+                </div>
+            </div>
             <div class="main-section" style="">
                 <div id="demo" class="carousel slide" data-ride="carousel" style="margin-bottom: 10px;">
                   <div class="carousel-inner">
@@ -2094,8 +2314,8 @@
             <a href="#" style="font-size: 19px;padding-left: 7px;"> <i class="icon-arrow_back"></i></a>
             <div class="div" style="width: 90%;">
                 <form class="form" style="position: relative;display: flex;width: 100%;" action="index.html">
-                    <input type="text" placeholder="Search... " name="" style="width: 100%;border-radius: 30px;padding-left: 93px;height: 32px;">
-                    <span class="search-tag">Mobiles <i class="icon-pencil"></i> </span>
+                    <input type="text" placeholder="Search... " name="" style="width: 100%;border-radius: 30px;padding-left: 10px;height: 32px;" data-toggle="modal" data-target="#myModal1">
+                    <!--<span class="search-tag">Mobiles <i class="icon-pencil"></i> </span>-->
                     <i class="icon-keyboard_voice" style="position: absolute;top:50%;color:#98989a;right: 3%;cursor: pointer;"></i>
                 </form>
             </div>
@@ -2104,9 +2324,54 @@
             </div>
         </div>                   
     </nav>
+    <div class="modal fade" id="myModal1" style="z-index: 999999999;background-color: white;padding-right: 0px !important;">
+        <div class="modal-dialog modal-lg" style="width: 100%;margin: 0px;z-index: 9999999;">
+            <button type="button"  style="position: absolute;z-index: 9999999;left: 1%;background-color: white;margin-top: 15px;"><i class="icon-arrow_back"></i></button>
+        </div>
+        <nav style="height: 50px !important;background-color: white !important;box-shadow: none !important;width: 95%;margin-left: 5%; ;z-index: 999 !important;">
+        <div class="navbar-container" style="padding-left: 0px;align-items: center;">
+            <a href="#" style="font-size: 19px;padding-left: 7px;" class="close" data-dismiss="modal"> </a>
+            <div class="div" style="width: 90%;">
+                <form class="form" style="position: relative;display: flex;width: 100%;" action="index.html">
+                    <input type="text" placeholder="Search... " name="" style="width: 100%;border-radius: 30px;padding-left: 10px;height: 32px;">
+                    <i class="icon-keyboard_voice" style="position: absolute;top:50%;color:#98989a;right: 3%;cursor: pointer;"></i>
+                </form>
+            </div>
+            <div class="div phase1" style="padding-top: 4px;">
+            <a href="#"><span style="font-size: 120%;margin-right: 16px;color: black;"><i class="icon-shopping-cart"></i></span></a>
+            </div>
+        </div>                   
+    </nav>
+        <div style="width: 100%;border-bottom: 1px solid #e0dbdb;margin-top: 50px;"></div>
+        <div style="padding: 7px;height: calc(100vh - 52px);margin-right: -17px;">
+            <div style="display: flex;justify-content: space-between;">
+                <b style="font-size: 20px;">Recent Searches</b> <b style="color: red;">Clear All</b>
+            </div> <br>
+            <div class="recent-search">
+                <span>Mobile</span> <span>Phones</span>
+            </div>
+            <div style="width: 100%;border-bottom: 10px solid #544c4c;margin-top: 30px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+                <b style="font-size: 20px;">Trending Searches</b> <b style="color: red;">Refresh</b>
+            </div> <br>
+            <div class="recent-search">
+                <span>Mobile</span> <span>Phones</span> <span>Wonder Women under 5000</span> <span>Phones</span><span>Mobile</span> <span>Silver Bowl</span><span>Mobile</span> <span>Phones</span> <span>Wonder Women under 5000</span> <span>Phones</span><span>Mobile</span> <span>Silver Bowl</span>
+            </div>
+        </div>
+        
+             
+    </div>
     <style type="text/css">
         .search-results{
             font-size: 14px;padding-left: 10px;
+        }
+        .recent-search span{
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 13px;
+            margin-bottom: 7px;
+            margin-right: 7px;
+            color: white;background-color: grey;border-radius: 5px;
         }
         .search-tag{
             position: absolute;color:#98989a;left: 0%;cursor: pointer;height: 28px;
@@ -2650,12 +2915,12 @@
         }
         .filter-container{
             position: fixed;
-            bottom: -266px;
+            bottom: -250px;
             transition: bottom 0.6s ease-in-out;
             width: 100%;
             left: 0%;
             background-color: white;
-            height: 266px;
+            height: 250px;
             z-index: 999999999999999;
             padding: 15px;
         }
@@ -3178,7 +3443,7 @@
         $(this).next().css('bottom' , '0%');
     });
     $('.close-thisbox').click(function(){
-        $(this).parent().parent('.filter-container').css('bottom' , '-266px');
+        $(this).parent().parent('.filter-container').css('bottom' , '-250px');
     });
     $('.next-login').click(function(){
         $('.pincode-location').fadeOut();
@@ -3222,6 +3487,21 @@
               "top":"0%"
             });
         }
+    });
+    $('#searchWithinSearc').click(function(){
+        $('.brand-hover').show();
+        $('.bigdaddy .top-cat-name').addClass('bobdaddy');
+        $('.js-adv-overlay').show();
+    });
+    $('.brand-hover .icon-close').click(function(){
+        $('.brand-hover').hide();
+         $('.bigdaddy .top-cat-name').removeClass('bobdaddy');
+         $('.js-adv-overlay').hide();
+    });
+    $('.js-adv-overlay').click(function(){
+        $('.brand-hover').hide();
+        $(this).hide();
+        $('.bigdaddy .top-cat-name').removeClass('bobdaddy');
     });
     $('.selected .icon-plus').click(function(){
         $(this).parent().siblings('.sub-cat-wrapper').slideToggle('slow');
