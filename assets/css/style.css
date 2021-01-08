@@ -197,6 +197,9 @@ hr{
     align-items: center;
         font-size: 98% !important;
 }
+.login-but:hover{
+  background-color: black;
+}
 .div ul li{
     width: 100%;
     padding: 7px;
